@@ -5,6 +5,7 @@ import UseEffectState from "./State/UseEffect/UseEffectState";
 import UseState from "./State/UseState/UseState";
 import AppLoader from "./utils/AppLoader/AppLoader";
 import AppAlert from "./utils/AppAlert/AppAlert";
+import TopLoadingBar from "./utils/TopLoadingBar/TopLoadingBar";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <UseState>
         <TestState>
           <UseEffectState>
+            <TopLoadingBar />
             <AppLoader />
             <AppAlert />
             <Route />

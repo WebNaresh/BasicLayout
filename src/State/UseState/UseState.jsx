@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import UseContext from "./UseContext";
 import { useCookies } from "react-cookie";
+import { useLocation } from "react-router-dom";
 export const UseState = (props) => {
   const [cookies, setCookie, removeCookie] = useCookies(["cookie-name"]);
+
+  const location = useLocation();
 
   const [appAlert, setAppAlert] = useState({
     alert: true,
@@ -15,6 +18,8 @@ export const UseState = (props) => {
     color: "#fff",
   });
 
+  const [progress, setProgress] = useState(0);
+
   return (
     <UseContext.Provider
       value={{
@@ -25,6 +30,9 @@ export const UseState = (props) => {
         setAppAlert,
         appLoading,
         setAppLoading,
+        progress,
+        setProgress,
+        location,
       }}
     >
       {props.children}
