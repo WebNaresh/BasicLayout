@@ -6,7 +6,7 @@ export const UseEffectState = (props) => {
   const { setProgress, location } = useContext(UseContext);
   const state = { name: "harry", class: "5b" };
   useEffect(() => {
-    console.log(location);
+    // console.log(location);
     setProgress(10);
     setTimeout(() => {
       setProgress(100);
