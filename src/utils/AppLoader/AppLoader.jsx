@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 import ReportIcon from "@mui/icons-material/Report";
-import UseContext from "../../State/UseState/UseContext";
+import { UseContext } from "../../State/UseState/UseContext";
 
 const AppLoader = () => {
   const { appLoading } = useContext(UseContext);
