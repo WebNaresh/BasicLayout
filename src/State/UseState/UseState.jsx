@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-import React, { useState, createContext } from "react";
+import React, { useState } from "react";
+import UseContext from "./UseContext";
 import { useCookies } from "react-cookie";
 import { useLocation } from "react-router-dom";
-
-const UseContext = createContext();
-
 export const UseState = (props) => {
   const [cookies, setCookie, removeCookie] = useCookies(["cookie-name"]);
+
   const location = useLocation();
 
   const [appAlert, setAppAlert] = useState({
@@ -41,10 +39,4 @@ export const UseState = (props) => {
     </UseContext.Provider>
   );
 };
-
-export { UseContext, UseState as default };
-=======
-import { createContext } from 'react'
-const UseContext = createContext()
-export default UseContext
->>>>>>> f0b67ca84710bdef000d1a017c26698056f8e002
+export default UseState;

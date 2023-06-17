@@ -1,6 +1,10 @@
 import Alert from "@mui/material/Alert";
 import { useContext } from "react";
+<<<<<<< HEAD
 import { UseContext } from "../../State/UseState/UseContext";
+=======
+import UseContext from "../../State/UseState/UseContext";
+>>>>>>> f0b67ca84710bdef000d1a017c26698056f8e002
 import Snackbar from "@mui/material/Snackbar";
 
 export default function AppAlert() {

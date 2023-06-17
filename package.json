@@ -15,6 +15,10 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.3",
+<<<<<<< HEAD
+=======
+    "mui-treasury": "^0.1.5-alpha.3",
+>>>>>>> f0b67ca84710bdef000d1a017c26698056f8e002
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect } from "react";
 import { UseContext } from "../UseState/UseContext";
 
@@ -24,3 +25,8 @@ const UseEffectState = (props) => {
 };
 
 export { UseEffectContext, UseEffectState as default };
+=======
+import { createContext } from 'react'
+const UseEffect = createContext()
+export default UseEffect
+>>>>>>> f0b67ca84710bdef000d1a017c26698056f8e002
