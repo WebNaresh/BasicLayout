@@ -1,9 +1,12 @@
-import React from "react";
-import { useContext } from "react";
-import TestContext from "./TestContext";
-import UseContext from "../UseState/UseContext";
-export const TestState = (props) => {
+import React, { useContext } from "react";
+import { createContext } from "react";
+import { UseContext } from "../UseState/UseContext";
+
+const TestContext = createContext();
+
+const TestState = (props) => {
   const { setAppAlert, setAppLoading } = useContext(UseContext);
+
   const handleAlert = (alert, type, msg) => {
     setAppAlert({
       alert: alert || false,
@@ -11,6 +14,7 @@ export const TestState = (props) => {
       msg: msg || "this is test message",
     });
   };
+
   const handleLoader = (load, color) => {
     setAppLoading({
       load: load || true,
@@ -22,10 +26,12 @@ export const TestState = (props) => {
       });
     }, 2000);
   };
+
   return (
     <TestContext.Provider value={{ handleAlert, handleLoader }}>
       {props.children}
     </TestContext.Provider>
   );
 };
-export default TestState;
+
+export { TestContext, TestState as default };
