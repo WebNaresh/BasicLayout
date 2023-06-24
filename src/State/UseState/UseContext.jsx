@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 const UseContext = createContext();
 
 export const UseState = (props) => {
+  let { first, setFirst } = props;
   const [cookies, setCookie, removeCookie] = useCookies(["cookie-name"]);
   const location = useLocation();
 
@@ -34,6 +35,8 @@ export const UseState = (props) => {
         progress,
         setProgress,
         location,
+        first,
+        setFirst,
       }}
     >
       {props.children}
